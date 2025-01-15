@@ -1,0 +1,209 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    background-color: rgb(51, 37, 57);
+    padding: 15px;
+    font-family: Arial, sans-serif;
+}
+
+/* header */
+.header{
+    background-color: rgba(0, 0, 0, 0.562);
+    text-align: center;
+    padding: 30px;  /*vnitřní odsazení*/
+    color: white;
+}
+.header h1{
+    font-size: 45px;
+}
+/* nav */
+.nav{
+    background-color: rgb(168, 124, 15);
+    overflow: hidden; /*objevi se pozadí kvuli float left*/
+    font-weight: bold;   
+}
+.nav a{
+    display: block; /*muzu nastavovat padding*/
+    float: left; /*vedle sebe v levo, pryč pozadí*/
+    color: white;
+    text-decoration: none; /*byebye potrženi*/
+    padding: 15px 18px;
+
+}
+.nav a:hover{ /*po najetí myší*/
+    background-color: rgba(62, 62, 62, 0.662);
+    color: white;
+
+}
+/* main */
+.main::after { /*když se header+footer spojí*/
+    display: table;
+    content: "";
+    clear: both;
+}
+.card{
+    background-color: rgba(0, 0, 0, 0.67);
+    color: white;
+    width: 100%;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.left{
+    float: left;
+    width: 80%;
+    text-align: justify; /*zarovnání do bloku*/
+
+}   
+.right{
+    float: left;
+    width: 20%;
+    padding-left: 15px;
+    text-align: justify;   
+}
+.right a{
+        text-decoration: none;    
+}
+.right h3{
+    text-align: center;
+}
+
+/* footer */
+.footer{
+    background-color:rgb(168, 124, 15);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+/* obrázky */
+.obr1 {
+    float: right;
+    padding-left: 20px;
+}
+.obrhl {
+    float: left;
+}
+.obrhl2 {
+    float: right;
+}
+.obr2{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.obr{
+       display: flex; 
+       align-items : center; 
+       float: left;
+       padding-right: 10px;
+}
+.vlajka{
+    width: 100px; 
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute; 
+    right: 35px; 
+    width: 30px;
+    top: 155px;
+}
+/* mapa */
+.map{
+    text-align: center;
+}
+/* tabulka*/
+.tabulka{
+    /* Použít CSS Flexbox */ 
+    display: flex; 
+
+    /* Střed položek vodorovně */ 
+    justify-content: center; 
+
+    /* Střed položek svisle */ 
+    align-items : center; 
+}
+.nadpish2 h2{
+    text-align: center;
+}
+.icons {
+    display: flex;
+    justify-content: center;  
+    align-items : center
+
+}
+
+.icon {
+    cursor: pointer;
+}
+.arrow{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* tabulka vůdci*/
+.tabulka-vudci{
+    display: flex;
+    justify-content: center; /* Horizontální centrování */
+    align-items: center; /* Vertikální centrování */
+    border: none;
+}
+.tabulka-vudci th {
+    background-color: #272727; /* Světle šedé pozadí pro hlavičku */
+    font-weight: bold; /* Tučné písmo */
+}
+.tabulka-vudci th, td {
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    border: none;
+}
+.tabulka-vudci tr:nth-child(odd) {
+    background-color: #272727; /* Světle šedé pozadí */
+}
+
+.tabulka-vudci tr:nth-child(even) {
+    background-color: #525252; /* Tmavší šedé pozadí */
+}
+
+.tabulka-vudci tr:hover {
+    background-color: #a9a9a9; 
+    color: white;
+}
+/* DLC tabulka */
+.tb-dlc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container td {
+    padding: 10px;
+}
+
+.obr-container {
+    position: relative;
+}
+
+.obr-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.obr-container:hover .text-overlay {
+    display: flex;
+}
